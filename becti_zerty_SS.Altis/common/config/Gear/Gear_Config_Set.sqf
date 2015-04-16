@@ -90,6 +90,7 @@ for '_i' from 0 to count(_items)-1 do {
 							case CTI_SUBTYPE_ACC_MUZZLE: {"Acc-Muzzle"};
 							case CTI_SUBTYPE_ACC_OPTIC: {"Acc-Optics"};
 							case CTI_SUBTYPE_ACC_SIDE: {"Acc-Side"};
+							case CTI_SUBTYPE_ACC_BIPOD: {"Acc-Bipod"};
 							case CTI_SUBTYPE_HEADGEAR: {"Headgear"};
 							case CTI_SUBTYPE_VEST: {"Vest"};
 							case CTI_SUBTYPE_UNIFORM: {"Uniform"};
@@ -101,7 +102,7 @@ for '_i' from 0 to count(_items)-1 do {
 								case (_item_subtype == "Uniform"): { [_gear_uniforms, _item] call CTI_CO_FNC_ArrayPush };
 								case (_item_subtype == "Vest"): { [_gear_vests, _item] call CTI_CO_FNC_ArrayPush };
 								case (_item_subtype == "Headgear"): { [_gear_headgear, _item] call CTI_CO_FNC_ArrayPush };
-								case (_item_subtype in ["Acc-Muzzle", "Acc-Optics", "Acc-Side"]): { [_gear_accessories, _item] call CTI_CO_FNC_ArrayPush };
+								case (_item_subtype in ["Acc-Muzzle", "Acc-Optics", "Acc-Side","Acc-Bipod"]): { [_gear_accessories, _item] call CTI_CO_FNC_ArrayPush };
 								case (_item_subtype in ["BaseItem", ""]): { [_gear_misc, _item] call CTI_CO_FNC_ArrayPush };
 							};
 						};
